@@ -381,7 +381,7 @@ body {animation: loadupcursor 2s;}
 .channel-members .member-username-inner {width:100%;}
 .channel-members .member-username {flex-flow: column;}
 .channel-members .member-username span+span {display: table;align-self: center;margin:0;}
-.channel-members .member ~ [style*="width: 100%"]{margin-top:20px;}
+.channel-members .member ~ [style*="width: 100%"]{margin-top:40px;}
 .theme-dark .chat.private {background:#117562;}
 .theme-dark .chat.private .title-wrap {width: calc(100% - 220px);}
 .theme-dark .chat.private .title-wrap ~ .content {width: calc(100% - 220px);}
