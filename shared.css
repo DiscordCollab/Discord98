@@ -505,6 +505,10 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 .private-channels .search-bar-icon .icon.icon-search-bar-eye-glass,
 .theme-dark .search .search-bar .search-bar-icon .icon.icon-search-bar-eye-glass {
     filter: invert();
+	top: 3px;
+}
+.theme-dark .search .search-bar .public-DraftEditorPlaceholder-root {
+    color: #000;
 }
 #clockPluginClock {
     box-shadow: inset 8px 8px 1px -7px #000, inset -1px -1px #fff;
