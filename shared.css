@@ -28,6 +28,7 @@ body {animation: loadupcursor 2s;}
 	padding: 10px 7px;
 	border: 2px outset;
 	border-color: #fff #000 #000 #fff !important;
+	border-radius: 0;
 	margin: 4px 0 -2px 0;
 }
 .theme-dark .channel-textarea-inner:before {
@@ -40,6 +41,15 @@ body {animation: loadupcursor 2s;}
 	border: 2px solid #c0c0c0;
 	pointer-events: none;
 }
+.theme-dark .channel-textarea-disabled {opacity: 1}
+.theme-dark .channel-textarea-disabled .channel-textarea-inner{
+	border:none;
+	border-top:2px outset #adadad !important;
+	border-left:2px outset #adadad!important;
+	box-shadow: inset 0 0 #c0c0c0, inset -2px -2px #f0f0f0;background:#bebebe;}
+.theme-dark .channel-textarea-disabled [placeholder] {opacity: .54}
+
+.theme-dark .channel-textarea-disabled .channel-textarea-inner:before {border:none;}
 .theme-dark .channel-textarea-inner .channel-textarea-upload {
 	border: 2px outset #000;
 	border-color: #fff #000 #000 #fff;
@@ -250,7 +260,7 @@ body {animation: loadupcursor 2s;}
 
 .dropdown-button path {
     stroke: transparent;
-}
+ }
 .guilds-wrapper .guilds .friends-online {
 	background: #c0c0c0;
 	color: #000;
@@ -406,7 +416,37 @@ body {animation: loadupcursor 2s;}
 .tooltips .tooltip.tooltip-bottom.tooltip-normal[style*="top: 66px;"]{visibility: hidden}
 
 /* USER MODAL */
-#user-profile-modal {border-radius: 0}
+#user-profile-modal {border: 2px outset;border-color: #fff #000 #000 #fff;background:#c0c0c0;}
+#user-profile-modal,#user-profile-modal .avatar-profile {border-radius: 0}
+#user-profile-modal .avatar-wrapper {top:50px;left:20px;}
+#user-profile-modal .header:after {content:'User Data';font-weight:600;padding-top:4px;padding-left:14px;height:20px;background: #494949;border:3px solid #c0c0c0;border-top-width:4px;color:#fefefe;}
+#user-profile-modal .tab-bar-container {box-shadow: none;border:none;}
+#user-profile-modal .guild:hover {border-top:1px solid #ccc;border-bottom:2px solid #aaa;padding: 4px 16px 3px 20px;}
+#user-profile-modal .header .header-info .discriminator, .header .header-info .username{display: flex !important;flex-flow:column;overflow:visible!important;color:#000!important}
+#user-profile-modal .header .header-info .username:before,.header .header-info .discriminator:before {content:'Username';margin:4px 4px 6px -20px;font-size:14px;color:#6a6a6a;}
+#user-profile-modal .header .header-info .discriminator:before {content:'Discriminator';}
+#user-profile-modal .header .header-info {padding-top:44px;order:1;}
+#user-profile-modal .header .actions{margin-bottom: -20px;padding-top:56px;margin-left:-20px;z-index:2}
+#user-profile-modal .header .additional-actions-icon {top:56px;}
+#user-profile-modal .header .header-info-inner {flex-direction: row!important}
+#user-profile-modal .header .discord-tag {width:150px;font-weight: 400;}
+#user-profile-modal .header .activity {width:150px !important;padding-left:20px;color:#6a6a6a!important;font-weight: 400;}
+#user-profile-modal .header .activity strong {display: block;color:#000;font-weight: 400;}
+#user-profile-modal .header .header-info .badge-premium {background:0;padding:0;margin:-58px -140px 0 100px;font-size:14px;height:18px;width:40px;color:#6a6a6a}
+#user-profile-modal .badge-premium:before {content:'Nitro';}
+#user-profile-modal .header {padding-left:190px;}
+#user-profile-modal .tab-bar-container {padding-top:12px;}
+#user-profile-modal .tab-bar.TOP {padding-top:30px;margin-left:-20px;}
+#user-profile-modal .tab-bar .tab-bar-item {padding: 3px 9px 5px;margin-left:0;border-radius:2px;border-bottom:1px solid #c0c0c0 !important;box-shadow: inset 0 0, inset -1px 0 #444;border: 1px outset #fff;}
+#user-profile-modal .tab-bar .tab-bar-item.selected {margin-left:-2px;margin-right:-1px;margin-top:-1px;padding: 4px 9px 5px;z-index: 1;}
+#user-profile-modal .avatar-wrapper ~ div {background:#c0c0c0;}
+#user-profile-modal .avatar-wrapper ~ div .scroller, #user-profile-modal .empty {margin:0 19px 12px 19px;left:20px;border-top:1px outset #fff!important;border-left:1px outset #fff!important;box-shadow: inset 0 0, inset -1px -1px #000;background:#bebebe;overflow-y: auto}
+
+#user-profile-modal .header,#user-profile-modal .tab-bar-container,#user-profile-modal .scroller,#user-profile-modal .guilds .guild:hover, #user-profile-modal .empty {background: #c0c0c0;}
+
+
+.callout-backdrop {background: -webkit-element(#user-profile-modal);}
+
 /* MISC */
  .channel-members-loading,.account .account-details, .header-toolbar button.active,.header-toolbar .separator:not(.separator-win) {display: none}
 .private-channels .search-bar {
@@ -457,15 +497,11 @@ body {animation: loadupcursor 2s;}
     -webkit-font-smoothing: none;
 }
 /* MESSAGE CONTAINER THINGY.. */
-
 .app .chat>.content {z-index:0}
 .chat .content .flex-spacer {margin-top:39px;border-right: 1px solid #000;}
-
 /* BORDER THAT DEFINES THE TASKBAR */
-
 .layer section:after {content:'';position:absolute;width:100%;border-top:1px solid #dedede;border-bottom:1px solid #fff;bottom:34px;left:0;z-index: 4;pointer-events: none;}
 .app .chat:after {content:'';position:absolute;width:221px;height:34px;bottom:0;right:0;background:#c0c0c0;}
-
 /*SCROLLBARS*/
 .scroller-wrap.fade .scroller::-webkit-scrollbar-thumb, .scroller-wrap.fade .scroller::-webkit-scrollbar-track-piece {
     visibility: visible;
