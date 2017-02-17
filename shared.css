@@ -632,8 +632,18 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 	width: 784px;
     margin-left: -392px;
 }
-.change-log-button-container:before, .tab-bar.SIDE .tab-bar-header, .tab-bar.SIDE .tab-bar-item.selected:before, .tab-bar.SIDE .tab-bar-item:hover:before {
+.change-log-button-container:before, .tab-bar.SIDE .tab-bar-item.selected:before, .tab-bar.SIDE .tab-bar-item:hover:before {
 	display: none;
+}
+.tab-bar.SIDE .tab-bar-header {
+	position: fixed;
+	background: linear-gradient(90deg, #000483, #0f7ecc);
+	width: 774px;
+	height: 25px;
+	padding: 0px 0px 0px 4px;
+	top: 55px;
+	line-height: 25px;
+	font-weight: 600;
 }
 .tab-bar.SIDE .tab-bar-item, .change-log-button-container {
 	border: 1px outset #000;
@@ -655,13 +665,13 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 	margin-top: 0;
 }
 .tab-bar.SIDE .tab-bar-item {
-    padding: 8px 13px 10px 14px;
+    padding: 3px 13px 5px 14px;
 }
 .change-log-button-container .change-log-button {
     color: #000;
     font-size: 14px;
     opacity: 1;
-	padding: 8px 15px 8px 12px;
+	padding: 4px 15px 2px 12px;
     font-weight: 500;
 }
 
