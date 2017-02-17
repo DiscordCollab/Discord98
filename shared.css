@@ -224,7 +224,7 @@ body {animation: loadupcursor 2s;}
 	border-top: 5px solid #c0c0c0;
 	border-bottom: 3px solid #c0c0c0;
 	box-shadow:none;
-	width:calc(100% - 220px);
+	width:calc(100% - 221px);
 	z-index:1;
 }
 .title-wrap:before{content: '';position: absolute;width:auto;height:32px;width:calc(100% - 312px);left:0;-webkit-app-region:drag;z-index: 0;}
@@ -315,7 +315,7 @@ body {animation: loadupcursor 2s;}
 }
 .win-buttons {
 	top: 8px;
-	right: 226px;
+	right: 227px;
 	height: 26px;
 }
 
@@ -450,10 +450,10 @@ body {animation: loadupcursor 2s;}
 }
 /* MESSAGE CONTAINER THINGY.. */
 .app .chat>.content {z-index:0}
-.chat .content .flex-spacer {margin-top:39px;}
+.chat .content .flex-spacer {margin-top:39px;border-right: 1px solid #000;}
 /* BORDER THAT DEFINES THE TASKBAR */
 .layer section:after {content:'';position:absolute;width:100%;border-top:1px solid #dedede;border-bottom:1px solid #fff;bottom:34px;left:0;z-index: 4;pointer-events: none;}
-.app .chat:after {content:'';position:absolute;width:220px;height:34px;bottom:0;right:0;background:#c0c0c0;}
+.app .chat:after {content:'';position:absolute;width:221px;height:34px;bottom:0;right:0;background:#c0c0c0;}
 /*SCROLLBARS*/
 
 .theme-dark .friends-table .scroller-wrap::-webkit-scrollbar-button:vertical:decrement,
