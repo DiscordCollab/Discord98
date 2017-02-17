@@ -1,3 +1,19 @@
+/* IMPORT CSS FROM GITHUB 
+@import url("https://rawgit.com/0mniscient/Discord-Themes/master/css/Quiet_2.css");
+:root { 
+ --main-color: #e21759;
+ --hover-color: #b81147;
+}
+.account {
+    z-index: 2;
+}
+.popout .status-picker.popout-menu {
+	z-index: 1;
+}
+
+https://u.nya.is/urysut.png
+setTimeout(function(){debugger;}, 2000)*/
+
 .account,
 .guilds-wrapper,
 .chat>.content,
@@ -45,11 +61,13 @@ body {animation: loadupcursor 2s;}
 	border-color: #fff #000 #000 #fff;
 	background-color: #c0c0c0 !important;
 	margin-left: -9px;
-	margin-right: 14px;
-	overflow: visible;
+    margin-right: 14px;
+    min-width:38px;
+    max-width:38px;
+    overflow: visible;
 }
 .theme-dark .channel-textarea-upload:active {
-	border-color: #000;
+	border-color: #000 #fff #fff #000;
 }
 .theme-dark .channel-textarea-inner .file-input {
 	background: url(/assets/623ccc7d43748a9622c078748ea9e706.svg) 50% no-repeat;
@@ -129,7 +147,7 @@ body {animation: loadupcursor 2s;}
 	z-index: 2;
 	cursor: pointer;
 }
-.guilds-wrapper:hover {
+.guilds-wrapper:hover, .guilds-wrapper:active {
 	height: 66%;
 	transition: height .4s ease-in-out .4s
 }
@@ -201,7 +219,7 @@ body {animation: loadupcursor 2s;}
 	background: linear-gradient(90deg, #000483, #0f7ecc);
 	min-height: 39px;
 	border-right: 3px solid #c0c0c0;
-	border-top: 3px solid #c0c0c0;
+	border-top: 5px solid #c0c0c0;
 	border-bottom: 3px solid #c0c0c0;
 }
 .title-wrap:before{content: '';position: absolute;width:auto;height:32px;width:calc(100% - 92px);left:0;-webkit-app-region:drag;z-index: 0;}
@@ -213,6 +231,19 @@ body {animation: loadupcursor 2s;}
 	max-height: 18px;
     -webkit-app-region: no-drag;
 }
+.dropdown-button {
+	background: #c0c0c0;
+	opacity: 1;
+	margin-top: -9px;
+	border: 2px outset #000;
+	border-color: #fff transparent #000 #fff;
+}
+.guilds-wrapper .guilds .friends-online {
+	background: #c0c0c0;
+	color: #000;
+	border: 2px outset #000;
+	border-color: #fff transparent #000 #fff;
+}
 /*Minimize Mazimize and Close buttons*/
 .win-buttons.win-buttons-light button {
 	border: 2px outset #000;
@@ -221,6 +252,12 @@ body {animation: loadupcursor 2s;}
 	height:26px;
 	width:26px;
 	opacity: 1;
+}
+
+.win-buttons.win-buttons-light button:active {
+	border: 2px outset #fff;
+	border-color: #000 transparent #fff #000;
+	background-color: #c0c0c0 !important;
 }
 
 .win-buttons.win-buttons-light button:after {content:'';position:absolute;width:26px;height:26px;transform:translate(-13px,-13px);filter:brightness();pointer-events:none;}
@@ -297,4 +334,47 @@ body {animation: loadupcursor 2s;}
 }
 
 /* MISC */
+
 .channel-members-loading {display: none}
+.private-channels .search-bar {
+    height: 31px;
+    background: #010c88;
+    border-radius: 0px;
+    border-top: 5px solid #c0c0c0;
+    border-left: 5px solid #c0c0c0;
+    border-bottom: 3px solid #c0c0c0;
+	padding: 0;
+}
+.private-channels .search-bar-inner {
+    background: #fff;
+    border-radius: 0px;
+	box-shadow: inset 8px 8px 0px -7px #000, inset -1px -1px #fff;
+}
+.search-bar input {
+    color: #000;
+}
+.search-bar input::-webkit-input-placeholder, .theme-dark .channel-textarea-inner textarea::-webkit-input-placeholder {
+  color: #000;
+}
+.private-channels .search-bar-icon {
+    background-color: #c0c0c0;
+	width: 28px;
+	border: 1px outset #000;
+	border-color: #fff #000 #000 #fff;
+}
+.private-channels .search-bar-icon:active {
+	border: 1px outset #fff;
+	border-color: #000 #fff #fff #000;
+}
+.search-bar-icon .icon.visible {
+    opacity: 1;
+}
+.private-channels .search-bar-icon .icon.icon-search-bar-eye-glass {
+    filter: invert();
+}
+
+/*MEMBERS*/
+
+.theme-dark .channel-members {
+    border-bottom: 30px solid #c0c0c0;
+}
