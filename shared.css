@@ -581,6 +581,7 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 .scroller-wrap.fade .scroller::-webkit-scrollbar-thumb, .scroller-wrap.fade .scroller::-webkit-scrollbar-track-piece {
     visibility: visible;
 }
+.app .scroller-wrap .scroller.messages::-webkit-scrollbar-track-piece {background:transparent!important;}
 .scroller-wrap.dark .scroller::-webkit-scrollbar-track {
     background: url(https://i.imgur.com/Wc8e5g3.png);
 }
