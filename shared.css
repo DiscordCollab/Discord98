@@ -581,9 +581,9 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 .scroller-wrap.fade .scroller::-webkit-scrollbar-thumb, .scroller-wrap.fade .scroller::-webkit-scrollbar-track-piece {
     visibility: visible;
 }
-.app .scroller-wrap .scroller.messages::-webkit-scrollbar-track-piece {background:transparent!important;}
-.scroller-wrap.dark .scroller::-webkit-scrollbar-track {
-    background: url(https://i.imgur.com/Wc8e5g3.png);
+::-webkit-scrollbar-track-piece,.app .scroller-wrap .scroller.messages::-webkit-scrollbar-track-piece, .app .scroller-wrap .scroller.guilds::-webkit-scrollbar-track-piece  {background:transparent!important;}
+.scroller-wrap .scroller::-webkit-scrollbar-track {
+    background: url(https://i.imgur.com/Wc8e5g3.png) !important;
 }
 .theme-dark .friends-table .scroller-wrap ::-webkit-scrollbar-thumb, .scroller-wrap.dark .scroller::-webkit-scrollbar-thumb, .theme-dark .messages-wrapper .scroller-wrap ::-webkit-scrollbar-thumb, .scroller-wrap .scroller::-webkit-scrollbar-thumb, ::-webkit-scrollbar-button {
     box-shadow: inset 8px 8px 0px -7px #fff, inset -1px -1px #808080;
