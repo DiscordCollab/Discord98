@@ -445,6 +445,7 @@ form .typing .text strong:nth-child(4):before {content:"4 People are typing...";
 }
 
 /* CHANNEL MEMBERS / DESKTOP MOCKUP */
+.channel-members .member .member-activity {color: #d6d6d6; }
 .chat .title-wrap ~ .content {position:absolute;height:100%;width:100%;}
 .channel-members-wrap {background:#117562;min-width:220px;max-width:220px;padding-top: 120px;margin-bottom:36px;right:0;}
 .theme-dark .channel-members {background-color: transparent;padding:0;display:flex;flex-flow: row wrap;width:220px;align-items: flex-start;direction: rtl}
@@ -778,6 +779,19 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 .theme-dark .channel-members .member:not(.disabled):hover {
 	background: transparent;
 }
+/*CHANNELS*/
+.guild-channels {
+    background-color: #ffffff;
+}
+.guild-channels header {
+    color: #000;
+	opacity: 1;
+}
+.guild-channels .channel a {
+	color: #000;
+	opacity: 0.7;
+}
+
 ::selection {
 	background: #000080 !important;
 	color: #fff !important;
