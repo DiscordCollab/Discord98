@@ -15,7 +15,11 @@
 .theme-dark .chat form .typing span,
 .theme-dark .message-group .comment .markup,
 .theme-dark .message-group h2 span,
-.theme-dark .message-group h2 strong {
+.theme-dark .message-group h2 strong,
+.theme-dark .system-message,
+.theme-dark .system-message .channel-name-change strong,
+.theme-dark .system-message .system-message-content .user-name,
+.theme-dark .system-message .system-message-content a {
 	color: #000;
 }
 /* START UP CURSOR */
@@ -172,16 +176,23 @@ body {animation: loadupcursor 2s;}
 
 
 /* EDITS FOR STATUS IN GUILD */
-.account .avatar-small {position:absolute;background:none!important;border-radius:0;bottom:40px;}
-.account .avatar-small .status{border:none;border-radius:0;width:100%;height:100%;top:0;left:0;}
+.account .avatar-small {position:absolute;border-radius:0;}
+.account .avatar-small .status{border:0px solid #fff;}
 .guilds-wrapper:hover ~ div .account .avatar-small{}
 
 /*ACCOUNT AREA*/
 .account{height:36px;}
-.account .avatar-small {margin-left:70px;margin-right:2px;}
+.account .avatar-small {
+    margin-left: 180px;
+    margin-right: 2px;
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+	background-repeat: no-repeat;
+}
 .channels-wrap .btn-group {
 	border: none!important;
-	margin-left: 106px;
+	margin-left: 87px;
 	border-radius: 0!important;
 	display: flex;
 }
@@ -228,9 +239,9 @@ body {animation: loadupcursor 2s;}
 /* TITLE BAR TITLE MOVED TO BOTTOM */
 .title-wrap .title {position:absolute;left:3px;bottom:3px;width:160px;padding:0px;padding-bottom: 2px;border: 1px outset #111;border-right:2px inset #fff;border-bottom:2px inset #fff;background:url(https://i.imgur.com/Wc8e5g3.png);box-shadow: inset 1px 1px 0 0px #333}
 .title-wrap .title .channel-name {display:flex;width:160px;margin:0 !important;flex-flow:row;font-size:14px;font-weight: 600;color:#000!important;white-space: nowrap;text-overflow: ellipsis;}
-.title-wrap .title .channel-name:before {content:''!important;display:block;transform:translatex(-2px);margin: 4px 0 0 5px;min-width:16px;height:16px;background:#000;}
+.title-wrap .title .channel-name:before {content:''!important;display:block;transform:translatex(-2px);margin: 4px 0 0 5px;min-width:16px;height:16px;background-size: cover;background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABVElEQVRYhcVXWw7DIAwL0+7Vq3G0cDLvp0WUPAgPaakipG7ExnGhTQDon/H5KzoRfU8VSim5UgJI6rzdFoyAR0S2CMyCa0SWPbAD3s6f9sAucB9hBVJKmAEHQMwsRvWPVhIRVpOZAUCMz+8V4zTwiEQLrhI4BX4DNSvPd74VeHlgx2DMLHpcSqHruqiUUu89j33FOrVyZq4SawpY7ZgCVwsoBDxQYcgIAa/AA9wSGII2PggR8CR8g+fQHPEUzK68B+tV8JSYIhDpo6aE54VjClheiPgmTCDST+mDOHglsNoGS3qnlth5604I45Wp3c360Yr29Ht2R6u+ew7M9N5zv7X6Vws0Er3LLQ9Ec5rACCznDJIlzNRIuG9Ebc/bfmonXyQA5cSVCuRetrDsKypI8P6ywJSM+MAkoIJ7l0GiJRORZA18oI62UisTgCNfOKux/W24Gz/Bs9Wgv43/GAAAAABJRU5ErkJggg==');}
 form .typing {left:162px;width:160px;height:22px;bottom:3px;padding-bottom:2px;border: 2px outset #000;border-color: #fff #000 #000 #fff;overflow:hidden;}
-form .typing .ellipsis {width:16px;height:16px;margin: 4px 4px 0 3px;background:#000;}
+form .typing .ellipsis {background-size: 18px;width:16px;height:16px;margin: 4px 4px 0 3px;background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA2UlEQVRYhe2Xaw6DIBCEZxrvzXI0Tzb9YWnEoqKu0kQnMcIG5XMfgJQET5GUJNaOf/lPPtybAEgiq799EL1D8H3xyAtLITkNYAozB+Eagj0qApBUcuGRdo2yEKQHh2Q63k6qyoGt9eul5jlASYgxnl8KH4UQci+bma6SmQmAJCFdXQKJMV7lhEzduBNC+BlAEqXFao/dzJYBAKDv+yKpl32q5lXwAGQ5MLeZe9lXAbyyfc6+CgA8VXBDgP+ogrQRldbqs0VJm34kjmp66rrkWL6k5kn4ADQHeAObOQSaukxHmQAAAABJRU5ErkJggg==');}
 form .typing .ellipsis .spinner-inner {display: none}
 form .typing .text {width:140px;overflow: hidden;text-overflow: ellipsis;font-weight: 600;font-size:14px;line-height: 24px}
 form .typing .text strong {font-weight: 600} 
@@ -452,6 +463,7 @@ form .typing .text strong:nth-child(4):before {content:"4 People are typing...";
 .theme-dark .chat.private {background:#117562;}
 .theme-dark .chat.private .title-wrap {width: calc(100% - 221px);}
 .theme-dark .chat.private .title-wrap ~ .content {width: calc(100% - 221px);}
+.title-wrap .status{margin-top: 4px;}
 .channel-members .member .member-activity {}
 .header-toolbar button:nth-child(2), .header-toolbar .separator ~ button:not(:last-of-type):not(.auto-update) {position: absolute;right:140px;top: 26px;height:40px;width:40px;}
 .header-toolbar button:nth-child(2):hover, .header-toolbar .separator ~ button:not(:last-of-type):hover {opacity:1}
@@ -575,7 +587,7 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 .scroller.messages {border-right: 1px solid #eee;}
 /* BORDER THAT DEFINES THE TASKBAR */
 .layer section:after {content:'';position:absolute;width:100%;border-top:1px solid #dedede;border-bottom:1px solid #fff;bottom:34px;left:0;z-index: 4;pointer-events: none;}
-.app .chat:after {content:'';position:absolute;width:221px;height:34px;bottom:0;right:0;background:#c0c0c0;}
+.app .chat:after {content:'';position:absolute;width:521px;height:34px;bottom:0;right:0;background:#c0c0c0;}
 /*SCROLLBARS*/
 .scroller-wrap.fade .scroller {overflow-y: auto;}
 .scroller-wrap.fade .scroller::-webkit-scrollbar-thumb, .scroller-wrap.fade .scroller::-webkit-scrollbar-track-piece {
@@ -716,6 +728,50 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
     font-weight: 500;
 }
 
+/*PRIVATE CHANNELS 
+.private-channels {
+    background-color: #117562;
+}
+.private-channels .channel.selected,
+.private-channels .channel:hover,
+.theme-dark .channel-members .member:not(.disabled).popout-open,
+.theme-dark .channel-members .member:not(.disabled):hover {
+	background: transparent;
+}
+.private-channels .channel.selected:before {
+	display: none;
+}
+.private-channels .channel .avatar-small {
+	border-radius:0px;
+	width: 40px;
+	height: 40px;
+	background-size: cover;
+}
+.private-channels{
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: column wrap;
+   flex-flow: column wrap;
+}
+.private-channels .channel{
+    text-align: center;
+    transform: translateX(-10px);
+	width: 93px;
+	margin-top: 40px;
+	direction: ltr;
+}
+.private-channels .channel .channel-name, .private-channels .channel.selected .channel-name {
+    transform: translateY(34px)translateX(-12px);
+	width: 65px;
+    position: absolute;
+	direction: ltr;
+	text-align: center;
+}
+
+.private-channels .scroller::-webkit-scrollbar {
+	width: 0px;
+}
+*/
 ::selection {
 	background: #000080 !important;
 	color: #fff !important;
