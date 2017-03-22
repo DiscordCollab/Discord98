@@ -877,6 +877,9 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 	background-repeat: no-repeat;
 	background-position: 2px 0px;
 }
+.guild-channels header button:after {
+    filter: invert();
+}
 ::selection {
 	background: #000080 !important;
 	color: #fff !important;
