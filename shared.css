@@ -772,6 +772,12 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 	width: 0px;
 }
 */
+.private-channels .channel.selected,
+.private-channels .channel:hover,
+.theme-dark .channel-members .member:not(.disabled).popout-open,
+.theme-dark .channel-members .member:not(.disabled):hover {
+	background: transparent;
+}
 ::selection {
 	background: #000080 !important;
 	color: #fff !important;
