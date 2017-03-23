@@ -796,6 +796,10 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 .guild-channels header button:after {
     filter: invert();
 }
+.guild-channels .channel-voice .channel-arrow {
+    filter: invert();
+    left: 17px;
+}
 ::selection {
 	background: #000080 !important;
 	color: #fff !important;
