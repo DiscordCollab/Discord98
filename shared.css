@@ -618,7 +618,7 @@ placeholder-9e7k, .search-bar input::-webkit-input-placeholder, .theme-dark .cha
 .layer section:after {content:'';position:absolute;width:100%;border-top:1px solid #dedede;border-bottom:1px solid #fff;bottom:34px;left:0;z-index: 4;pointer-events: none;}
 .app .chat:after {content:'';position:absolute;width:521px;height:34px;bottom:0;right:0;background:#c0c0c0;}
 /*SCROLLBARS*/
-.scroller-wrap.fade .scroller {overflow-y: auto;}
+.scroller-wrap.fade .scroller {overflow-y: scroll;}
 .scroller-wrap.fade .scroller::-webkit-scrollbar-thumb, .scroller-wrap.fade .scroller::-webkit-scrollbar-track-piece {
     visibility: visible;
 }
