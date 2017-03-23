@@ -501,7 +501,7 @@ form .typing .text strong:nth-child(4):before {content:"4 People are typing...";
 .header-toolbar .separator ~ button:not(:last-of-type):not(.auto-update):after {content:'Mentions';}
 .theme-dark .channel-members::-webkit-scrollbar{width:0;}
 
-.member .avatar-small .status {display: block;bottom:-4px;right:4px !important;width: 40px!important;height: 42px;border:none;border-radius:0;-webkit-clip-path: polygon(0% 0%, 7px 0%, 7px calc(100% - 7px), 100% calc(100% - 7px), 100% 100%, 0% 100%);box-shadow: -1px 1px 2px rgba(0,0,0,.26);}
+.member .avatar-small .status {display: block;bottom:-4px;right:4px !important;width: 40px!important;height: 42px;z-index:-1;border:none;border-radius:0;-webkit-clip-path: polygon(0% 0%, 7px 0%, 7px calc(100% - 7px), 100% calc(100% - 7px), 100% 100%, 0% 100%);box-shadow: -1px 1px 2px rgba(0,0,0,.26);}
 .member .avatar-small .status .spinner {margin:32px 0 0 12px;}
 #friends:after{content:'';position:absolute;width:220px;height:calc(100% - 36px);right:0;top:0;background:#117562;}
 #friends .friends-header {width: calc(100% - 240px);padding:0 10px;}
