@@ -487,7 +487,9 @@ form .typing .text strong:nth-child(4):before {content:"4 People are typing...";
 .channel-members .member .member-inner {width:92px;margin-top: 6px}
 .channel-members .member-username-inner {width:100%;}
 .channel-members .member-username {flex-flow: column;}
-.channel-members .member-username span+span {display: table;align-self: center;margin:0;}
+.channel-members .member-username span+span {display: table;align-self: center;margin-top: -17px;margin-left: 16px;position: absolute;}
+.bot-tag.kawaii-tag{margin-top: -18px !important;margin-left: -24px !important;}
+.renamer-tag{margin-top: -56px !important;margin-left: -20px !important;}
 .channel-members [style*="width: 100%"]:not(:first-child){margin-top:40px;}
 .theme-dark .chat.private {background:#117562;}
 .theme-dark .chat.private .title-wrap {width: calc(100% - 221px);}
